@@ -7,11 +7,13 @@
       <router-link :to="{ name: 'programming' }">Programming</router-link>
       <router-link :to="{ name: 'favourites' }">Favourites</router-link>
     </nav>
-    <router-view id="view" :programmingJokes="programmingJokes" :generalJokes="generalJokes" :knock_knockJokes="knock_knockJokes"></router-view>
+    <router-view id="view" :programmingJokes="programmingJokes" :generalJokes="generalJokes" :knock_knockJokes="knock_knockJokes" :favouriteJokes="favouriteJokes"></router-view>
   </div>
 </template>
 
 <script>
+
+import {eventBus} from './main.js'
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
     return {
       programmingJokes: [],
       generalJokes: [],
-      knock_knockJokes: []
+      knock_knockJokes: [],
+      favouriteJokes: []
     }
   },
 
@@ -36,6 +39,10 @@ mounted() {
   fetch('https://official-joke-api.appspot.com/jokes/knock-knock/ten')
   .then(result => result.json())
   .then(jokes => this.knock_knockJokes = jokes)
+
+  eventBus.$on('add-to-favourites', (favourite) =>{
+    this.favouriteJokes.push(favourite)
+  })
 
 }
 }
