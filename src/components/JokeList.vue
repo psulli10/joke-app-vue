@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <ul>
-      <JokeItem v-for="(joke, index) in programmingJokes" :joke="joke" :key="index"></JokeItem>
+      <JokeItem v-for="(joke, index) in jokes" :joke="joke" :key="index"></JokeItem>
     </ul>
   </div>
 </template>
@@ -11,7 +11,7 @@ import JokeItem from '@/components/JokeItem'
 
 export default {
   name: 'joke-list',
-  props: ['programmingJokes'],
+  props: ['jokes'],
   components: {
     JokeItem
   }

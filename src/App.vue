@@ -7,7 +7,7 @@
       <router-link :to="{ name: 'programming' }">Programming</router-link>
       <router-link :to="{ name: 'favourites' }">Favourites</router-link>
     </nav>
-    <router-view id="view" :programmingJokes="programmingJokes"></router-view>
+    <router-view id="view" :programmingJokes="programmingJokes" :generalJokes="generalJokes" :knock_knockJokes="knock_knockJokes"></router-view>
   </div>
 </template>
 

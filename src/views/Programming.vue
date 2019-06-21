@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
   <h1>Programming</h1>
-  <JokeList :programmingJokes="programmingJokes"></JokeList>
+  <JokeList :jokes="programmingJokes"></JokeList>
     </div>
 </template>
 
