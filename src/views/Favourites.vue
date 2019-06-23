@@ -1,6 +1,9 @@
 <template lang="html">
-  <div class="">
-  <h1>Favourites</h1>
+  <div class="favourites">
+    <div class="favourites-header">
+    <h1>Favourites</h1>
+    </div>
+    <h3 v-if="!favouriteJokes">You've no favourites yet...</h3>
   <JokeList :jokes="favouriteJokes"></JokeList>
     </div>
 </template>
@@ -17,4 +20,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.favourites-header {
+  display: flex;
+  justify-content: space-around;
+  width: inherit;
+}
 </style>
