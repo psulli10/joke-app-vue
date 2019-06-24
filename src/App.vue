@@ -91,7 +91,7 @@ body {
 
 	.content {
 		grid-area: content;
-    height: 160vh;
+    height: auto;
     display: flex;
     align-content: space-around;
 	}
