@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="wrapper">
     <div class="setup">
-      <h4>{{joke.setup}}</h4>
+      <p>{{joke.setup}}</p>
     </div>
     <div class="punchline-buttons">
       <button v-if="!showPunchline"v-on:click="handleClick" type="button" name="show-punchline-button">Make me laugh</button>
@@ -9,7 +9,7 @@
       <button v-if="showPunchline" v-on:click="handleFavouriteClick" type="button" name="favourite-button">Add to my favourites</button>
       </div>
     <div class="punchline">
-    <h4 v-if="showPunchline">{{joke.punchline}}</h4>
+    <p v-if="showPunchline">{{joke.punchline}}</p>
   </div>
   </div>
 </template>
